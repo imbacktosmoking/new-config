@@ -1,0 +1,133 @@
+
+
+* {
+  transition: none;
+  box-shadow: none;
+  font-family: JetBrainsMono Nerd Font, Inconsolata Nerd Font;
+  font-size: 21px;
+}
+
+#waybar {
+	 font-family: JetBrainsMono Nerd Font, Inconsolata Nerd Font;
+	font-size: 1.2em;
+	font-weight: 400;
+  color: #000000;
+   background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#workspaces button {
+  padding: 5px;
+  color: #02031d;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+}
+
+#workspaces button.focused {
+  color: #a6adc8;
+  background: #eba0ac;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: #a6e3a1;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+  border-radius: 10px;
+}
+#tray {
+  margin: 4px 4px 4px 4px;
+  border-radius: 4px;
+  background-color: @base02;
+}
+
+
+
+
+
+
+
+#tray * {
+  padding: 0 6px;
+  border-left: 1px solid @base00;
+}
+
+#tray *:first-child {
+  border-left: none;
+}
+
+.modules-left,.modules-center,.modules-right {
+  padding: 0px 10px;
+  background-image: linear-gradient(90deg, rgb(49, 52, 109), rgb(72, 105, 181));
+  border-radius: 12px;
+
+}
+
+#custom-button{
+  padding: 0px 10px;
+  margin: 3px;
+  /*color: rgb(231, 94, 94);*/
+  
+}
+
+
+#battery, #pulseaudio, #backlight{
+    padding: 0px 10px;
+    margin: 3px;
+}
+
+#bluetooth, #network{
+ 
+    padding: 0px 10px;
+    margin: 3px;
+
+
+
+}
+
+
+
+
+#clock {
+  padding: 0px 10px;
+  margin: 3px;
+}
+
+
+#mpris {
+    padding: 0px 10px;
+    margin: 3px;
+
+}
+
+
+
+
+
+#window {
+color: #000000;
+
+	font-family: sans-serif;
+	background-color: #000000; 
+  border-radius: 4px;
+   min-width: 20px;
+	
+}

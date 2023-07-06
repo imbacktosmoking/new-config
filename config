@@ -1,0 +1,148 @@
+{
+"layer": "top",
+"position": "top",
+"height": 34,
+"spacing": 4,
+"modules-left": ["wlr/workspaces","mpris" ],
+"modules-center": ["clock"],
+"modules-right": ["backlight","pulseaudio" ,"battery", "bluetooth", "network", "custom/button"],
+"wlr/workspaces": {
+"disable-scroll": true,
+"on-click": "activate",
+"format": "{name}",
+"on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
+"on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
+"format-icons": {
+"1": "",
+"2": "",
+"3": "",
+"4": "",
+"5": "",
+"urgent": "",
+"focused": "",
+"default": ""
+},
+
+
+
+
+},
+"backlight": {
+"format": "{percent}% {icon}",
+"format-icons": 
+["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+
+},
+
+
+"custom/button":{
+
+    "format": "",
+    "on-click": "poweroff", 
+
+  },
+
+
+
+
+
+
+ "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+
+
+
+
+
+
+"clock": {
+"format": "{:%b %d %a %I %M %p}", 
+"interval": 60,
+"tooltip": true,
+"tooltip-format": "{:%A, %B %d, %Y}"
+},
+
+
+
+
+
+
+"network": {
+    "tooltip": false,
+    "format-wifi": " ",
+    "format-disabled": "󰖪",
+    "format-ethernet": " {ipaddr}",
+    "on-click": "kitty nmtui"
+     },
+
+
+"bluetooth": {
+        "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueberry"
+    },
+
+
+
+
+	
+	
+"pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon} ",
+    "format-muted": "",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", "󰕾"]  },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+},
+
+"mpris": {
+      "title-len": 50,
+
+      "dynamic-len": 20,
+      "max-len": 20,
+      "format": "{player_icon} {artist} - {title}",
+      "format-paused": "{status_icon} {artist} - {title}",
+      "player-icons": {
+        "default": "▶",
+        "mpv": "🎵",
+        "spotify": "",
+        "firefox": ""
+      },
+      "status-icons": {
+        "paused": ""
+      },
+      "ignored-players": ["firefox"] 
+      
+    }
+
+
+   
+}
